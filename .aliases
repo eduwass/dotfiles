@@ -151,5 +151,5 @@ alias reload="exec $SHELL -l"
 
 alias sites="cd $HOME/Sites"
 alias sourcetree='open -a SourceTree .'
-alias st='st'
+alias st='sourcetree'
 alias d4m='. /Users/eduwass/Sites/d4m-nfs/d4m-nfs.sh'
