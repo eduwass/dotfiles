@@ -46,3 +46,30 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Add VV completion ( https://github.com/bradp/vv#adding-tab-completion-to-vv )
+source $( echo $(which vv)-completions)
+
+# Add WP-CLI completion ( http://wp-cli.org/ )
+# bash completion for the `wp` command
+_wp_complete() {
+    local OLD_IFS="$IFS"
+    local cur=${COMP_WORDS[COMP_CWORD]}
+
+    IFS=$'\n';  # want to preserve spaces at the end
+    local opts="$(wp cli completions --line="$COMP_LINE" --point="$COMP_POINT")"
+
+    if [[ "$opts" =~ \<file\>\s* ]]
+    then
+        COMPREPLY=( $(compgen -f -- $cur) )
+    elif [[ $opts = "" ]]
+    then
+        COMPREPLY=( $(compgen -f -- $cur) )
+    else
+        COMPREPLY=( ${opts[*]} )
+    fi
+
+    IFS="$OLD_IFS"
+    return 0
+}
+complete -o nospace -F _wp_complete wp
