@@ -159,3 +159,6 @@ alias sites="cd $HOME/Sites"
 alias sourcetree='sourcetree'
 alias st='sourcetree'
 alias d4m='. /Users/eduwass/Sites/d4m-nfs/d4m-nfs.sh'
+alias vvv="cd $HOME/Sites/VVV"
+alias vw="cd $HOME/Sites/VVV/www"
+
