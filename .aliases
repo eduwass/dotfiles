@@ -155,10 +155,23 @@ function sourcetree {
     fi                                           
 }
 
+function dockerssh {
+    docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}'
+    echo "Select the container ID:"
+    read container_id                                                    
+    if [ $container_id ]; then                                              
+        docker exec -it $container_id /bin/bash                                         
+    fi                                           
+}
+
 alias sites="cd $HOME/Sites"
 alias sourcetree='sourcetree'
 alias st='sourcetree'
 alias d4m='. /Users/eduwass/Sites/d4m-nfs/d4m-nfs.sh'
 alias vvv="cd $HOME/Sites/VVV"
 alias vw="cd $HOME/Sites/VVV/www"
+alias ownall="chown -R eduwass *"
+alias dup="d4m && ownall && docker-compose up"
+alias dockerssh='dockerssh'
+
 
