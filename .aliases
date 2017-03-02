@@ -165,7 +165,7 @@ function dockerssh {
 }
 
 function homestead() {
-    ( cd ~/Homestead && vagrant $* )
+    ( cd $HOME/Sites/Homestead && vagrant $* )
 }
 
 alias home="cd $HOME"
