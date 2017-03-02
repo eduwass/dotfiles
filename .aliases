@@ -163,6 +163,11 @@ function dockerssh {
         docker exec -it $container_id /bin/bash                                         
     fi                                           
 }
+
+function homestead() {
+    ( cd ~/Homestead && vagrant $* )
+}
+
 alias home="cd $HOME"
 alias sites="cd $HOME/Sites"
 alias sourcetree='sourcetree'
@@ -173,5 +178,6 @@ alias vw="cd $HOME/Sites/VVV/www"
 alias ownall="sudo chown -R eduwass *"
 alias dup="d4m && ownall && docker-compose up"
 alias dockerssh='dockerssh'
+alias homestead='homestead'
 
 
