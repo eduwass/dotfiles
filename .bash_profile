@@ -2,6 +2,7 @@
 export PATH="$HOME/bin:$PATH;";
 # Add composer bin to $PATH
 export PATH="$PATH:$HOME/.composer/vendor/bin";
+export PATH="$PATH:/sbin";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
