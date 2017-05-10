@@ -179,5 +179,6 @@ alias ownall="sudo chown -R eduwass *"
 alias dup="d4m && ownall && docker-compose up"
 alias dockerssh='dockerssh'
 alias homestead='homestead'
+alias pull='git pull'
 
 
