@@ -182,4 +182,5 @@ alias dockerssh='dockerssh'
 alias homestead='homestead'
 alias pull='git pull'
 alias composer="php /usr/local/bin/composer.phar"
+alias i='itermocil'
 
