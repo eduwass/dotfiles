@@ -1,14 +1,25 @@
 {
 	"Seti_SB_med": true,
+	"auto_complete_selector": "source, text",
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Seti_monokai (SL).tmTheme",
+	"color_scheme": "Packages/User/Seti_monokai.tmTheme",
 	"fade_fold_buttons": false,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		"node_modules/",
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
 	"font_face": "Source Code Pro",
-	"font_size": 13,
+	"font_size": 15,
 	"hide_vscrollbar": true,
 	"highlight_line": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -17,11 +28,14 @@
 	"line_padding_top": 6,
 	"original_color_scheme": "Packages/User/Seti_monokai (SL).tmTheme",
 	"overlay_scroll_bars": "disabled",
+	"remember_open_files": false,
 	"rulers":
 	[
 		100,
 		120
 	],
+	"tab_size": 2,
 	"theme": "Seti_orig.sublime-theme",
-	"translate_tabs_to_spaces": false
+	"translate_tabs_to_spaces": true,
+	"word_wrap": "false"
 }
