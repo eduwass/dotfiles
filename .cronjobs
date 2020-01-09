@@ -1,0 +1,21 @@
+# ============================== #
+# Turn on grayscale
+# ============================== #
+# command to run
+croncmd="$HOME/Sites/dotfiles/grayscale.sh"
+# time to run it ( use this to generate: https://crontab.guru/ )
+# “At 23:00 on every day-of-week from Monday through Friday.”
+cronjob="00 23 * * 1-5 $croncmd"
+# add it to the crontab, with no duplication:
+( crontab -l | grep -v -F "$croncmd" ; echo "$cronjob" ) | crontab -
+
+# ============================== #
+# Turn off grayscale
+# ============================== #
+# command to run
+croncmd2="$HOME/Sites/dotfiles/grayscale.sh -1"
+# time to run it ( use this to generate: https://crontab.guru/ )
+# “At 07:00 on every day-of-week from Monday through Friday.”
+cronjob2="00 07 * * 1-5 $croncmd2"
+# add it to the crontab, with no duplication:
+( crontab -l | grep -v -F "$croncmd2" ; echo "$cronjob2" ) | crontab -

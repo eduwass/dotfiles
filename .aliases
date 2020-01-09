@@ -172,7 +172,7 @@ alias home="cd $HOME"
 alias sites="cd $HOME/Sites"
 alias sourcetree='sourcetree'
 alias st='sourcetree'
-alias d4m='. /Users/eduwass/Sites/d4m-nfs/d4m-nfs.sh'
+alias d4m='. $HOME/Sites/d4m-nfs/d4m-nfs.sh'
 alias vvv="cd $HOME/Sites/VVV"
 alias vw="cd $HOME/Sites/VVV/www"
 alias ownall="sudo chown -R eduwass *"
@@ -183,4 +183,5 @@ alias homestead='homestead'
 alias pull='git pull'
 alias composer="php /usr/local/bin/composer.phar"
 alias i='itermocil'
-
+alias archive-commit='. $HOME/Sites/dotfiles/archive-commit.sh'
+alias grayscale='. $HOME/Sites/dotfiles/grayscale.sh'
