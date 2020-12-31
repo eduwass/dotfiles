@@ -12,6 +12,8 @@ for file in ~/.{path,bash_prompt,exports,aliases,cronjobs,functions,extra}; do
 done;
 unset file;
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
@@ -49,9 +51,6 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-# Add VV completion ( https://github.com/bradp/vv#adding-tab-completion-to-vv )
-source $( echo $(which vv)-completions)
 
 # Add WP-CLI completion ( http://wp-cli.org/ )
 # bash completion for the `wp` command
