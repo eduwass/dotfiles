@@ -184,4 +184,4 @@ alias pull='git pull'
 alias composer="php /usr/local/bin/composer.phar"
 alias i='itermocil'
 alias archive-commit='. $HOME/Sites/dotfiles/archive-commit.sh'
-alias grayscale='. $HOME/Sites/dotfiles/grayscale.sh'
+
