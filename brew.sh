@@ -103,3 +103,9 @@ brew install zopfli
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Custom stuff installed with brew
+brew install bat
+brew install eth-p/software/bat-extras
+brew install gh
+brew install jesseduffield/lazygit/lazygit
