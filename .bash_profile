@@ -81,3 +81,13 @@ eval "$(symfony-autocomplete)"
 
 # Local CLI autocomplete
 eval $(local-cli autocomplete:script bash)
+
+
+# iTerm2 Custom User Vars
+# https://medium.com/@msvechla/customizing-the-new-iterm2-status-bar-to-your-needs-252eee06bf39
+function iterm2_print_user_vars() {
+	iterm2_set_user_var gitBranch $(prompt_git)
+	iterm2_set_user_var pwd $(dirs +0)
+	iterm2_set_user_var lastCommand $( history | tail -1 | cut -c8-999 )
+}
+source ~/.iterm2_shell_integration.bash
