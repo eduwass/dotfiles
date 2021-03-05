@@ -109,3 +109,4 @@ brew install bat
 brew install eth-p/software/bat-extras
 brew install gh
 brew install jesseduffield/lazygit/lazygit
+brew install tre-command
