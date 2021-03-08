@@ -147,21 +147,21 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-function sourcetree {                                                                
-    if [ "$1" ]; then                                              
+function sourcetree {
+    if [ "$1" ]; then
         open -a SourceTree $1
     else
-        open -a SourceTree .                                                 
-    fi                                           
+        open -a SourceTree .
+    fi
 }
 
 function dockerssh {
     docker ps --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}'
     echo "Select the container ID:"
-    read container_id                                                    
-    if [ $container_id ]; then                                              
-        docker exec -it $container_id /bin/bash                                         
-    fi                                           
+    read container_id
+    if [ $container_id ]; then
+        docker exec -it $container_id /bin/bash
+    fi
 }
 
 function homestead() {
@@ -184,4 +184,4 @@ alias pull='git pull'
 alias composer="php /usr/local/bin/composer.phar"
 alias i='itermocil'
 alias archive-commit='. $HOME/Sites/dotfiles/archive-commit.sh'
-
+alias cat='bat'
